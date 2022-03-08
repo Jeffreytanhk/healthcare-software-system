@@ -39,14 +39,10 @@ EmployeeRecord.init(
       field: 'sick_leave_remaining'
     },
     createdAt: {
-      type: DataTypes.DATE,
-      field: "created_at",
-      defaultValue: Sequelize.fn('NOW'),
+      type: DataTypes.DATE
     },
     updatedAt: {
-      type: DataTypes.DATE,
-      field: "updated_at",
-      defaultValue: Sequelize.fn('NOW'),
+      type: DataTypes.DATE
     },
   },
   {

@@ -8,8 +8,7 @@ Clinic.init(
     ID: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true,
-      allowNull: false,
+      autoIncrement: true
     },
     name: {
       type: DataTypes.STRING,
@@ -20,14 +19,10 @@ Clinic.init(
       allowNull: false,
     },
     createdAt: {
-      type: DataTypes.DATE,
-      field: "created_at",
-      defaultValue: Sequelize.fn('NOW'),
+      type: DataTypes.DATE
     },
     updatedAt: {
-      type: DataTypes.DATE,
-      field: "updated_at",
-      defaultValue: Sequelize.fn('NOW'),
+      type: DataTypes.DATE
     },
   },
   {
