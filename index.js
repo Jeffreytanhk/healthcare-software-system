@@ -44,7 +44,20 @@ const {sequelize} = require("./Modules/ORM/setup");
           mcEndDate: new Date(2022, new Date().getMonth(), new Date().getDate()+2),
           status:"TEST"
       })
-      console.log("created MC", MC);
+      console.log("created MC", createdMC);
+      
+      const createdMedRecord = await MedRecord.create({
+          clinicID:createdClinic.ID,
+          FIN:fin,
+          issueMC:true,
+          mcID:createdMC.mcId,
+          medicalHistory:"bla bla history",
+          currentDiagnosis:"bla bla dianogsis",
+          visitHistory:new Date(),
+          nextOfKinName:"next of kin",
+          nextOfKinContact:123123
+      })
+      console.log("created med record", createdMedRecord);
     // await Company.sync();
     // await Clinic.sync();
     // await EmployeeRecord.sync();
