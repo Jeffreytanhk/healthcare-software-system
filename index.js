@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 })
 
 //port number
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5050;
 
 //app to run at this port number
 app.listen(PORT, () => {
