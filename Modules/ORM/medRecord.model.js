@@ -15,12 +15,12 @@ MedRecord.init(
       allowNull: false,
       field: 'reg_no'
     },
-    clinicID: {
+    clinicID: { // FK
       type: DataTypes.INTEGER,
       allowNull: false,
       field: 'clinic_ID'
     },
-    FIN: {
+    FIN: { // FK
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -29,7 +29,7 @@ MedRecord.init(
       allowNull: false,
       field: 'issue_mc'
     },
-    mcID: {
+    mcID: { //FK
       type: DataTypes.INTEGER,
       allowNull: false,
       field: 'mc_ID'
@@ -60,14 +60,10 @@ MedRecord.init(
       field: 'next_of_kin_contact'
     },
     createdAt: {
-      type: DataTypes.DATE,
-      field: "created_at",
-      defaultValue: Sequelize.fn('NOW'),
+      type: DataTypes.DATE
     },
     updatedAt: {
-      type: DataTypes.DATE,
-      field: "updated_at",
-      defaultValue: Sequelize.fn('NOW'),
+      type: DataTypes.DATE
     },
   },
   {

@@ -25,14 +25,10 @@ Person.init(
       field: 'date_of_birth'
     },
     createdAt: {
-      type: DataTypes.DATE,
-      field: "created_at",
-      defaultValue: Sequelize.fn('NOW'),
+      type: DataTypes.DATE
     },
     updatedAt: {
-      type: DataTypes.DATE,
-      field: "updated_at",
-      defaultValue: Sequelize.fn('NOW'),
+      type: DataTypes.DATE
     },
   },
   {
